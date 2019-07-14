@@ -1,0 +1,106 @@
+
+      .modal-body {
+        padding: 0.5rem 1rem 0 1rem !important;
+      }
+      .inputfile {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        }
+        #addModelPopup .submit, #addModelPopup .reset {
+        padding: 0.4em 1em !important;
+        font:normal normal normal 1em Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        display: inline-block;
+        position: relative;
+        background-color: #eaeaea;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 6px 3px rgba(0, 0, 0, .1);
+        -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 6px 3px rgba(0, 0, 0, .1);
+        box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 6px 3px rgba(0, 0, 0, .1);
+        transition:0.5s all;
+        border:1px solid rgba(0,0,0,0.3);
+        color:#404040;
+        }
+    
+        .modal-header {
+            background-color: #ffffff !important;
+            padding: .5rem 1rem 0.5rem 1rem;
+            border-top-left-radius: .2rem;
+            border-top-right-radius: .2rem;
+        }
+    
+        button:focus {
+            outline: transparent !important;
+        }
+    
+        .cm .close {
+            font-size: 1.75em;
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 0 #fff;
+            opacity: 1;
+        }
+        .cm .modal-header .modal-title {
+            color: rgb(0, 0, 0);
+            font-size: 1.1em;
+        }
+        .cm .modal-body input, .cm .modal-body textarea {
+            border: none;
+            border-bottom: 1px solid #ced4da;
+            border-radius: 0px;
+            font: normal normal normal 0.85em Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+            margin-bottom:5px;
+            padding: 5px 0;
+        }
+        
+        .cm .modal-body textarea {
+            border: 1px solid #ced4da;
+            border-radius: 0px;
+            font: normal normal normal .95em/1.2rem Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        }
+    
+        .inputfile + label {
+            max-width: 100%;
+            font: normal normal normal 1em 'robotoregular';
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 5px;
+            padding: 0.25rem 0.75rem;
+        }
+        textarea {
+            overflow-y: scroll; 
+            resize: none; /* Remove this if you want the user to resize the textarea */
+            height: 90px;
+        }
+    .iconStatus{
+        text-align: center;
+        margin:0 0 0 12px;
+        background: var(--color-foreground-text-main);
+        color: Grey;
+        outline: 0;
+        border: 2px var(--color-foreground-text-sub) solid;
+    }
+        .close span {
+            font-size: 1em;
+            color: rgba(88,88,88,1.00);
+            text-shadow: 0 0 0 #fff;
+            opacity: 1;
+            position: absolute;        
+            right: 15px;
+        }
+    
+        ::ng-deep mat-dialog-container#addModelDialog{
+            padding: 0px !important;
+        }
+    
+        .inputAddBtn label.form-check-label {
+            font:normal normal normal 1em/1.5em Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif" ;
+            background-color: white;
+        }

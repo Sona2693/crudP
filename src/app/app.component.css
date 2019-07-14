@@ -1,0 +1,84 @@
+.sort .filter{
+    font-size: smaller;
+    font-weight: bold
+}
+.add {
+    border:none;
+    margin: 20px 160px 20px 0px;
+}
+.edit{
+        border:none;
+        margin: 0px 160px 20px 0px;
+    
+}
+.delete{
+    border:none;
+
+}
+.add-bttn,.delete-bttn,.edit-bttn {
+    text-align: center;
+    background: var(--color-foreground-text-main);
+    color: Grey;
+    outline: 0;
+    border: 2px var(--color-foreground-text-sub) solid;
+
+  }
+.add-btn:hover,.delete-bttn:hover,.edit-bttn:hover {
+    background: var(--color-foreground-text-sub);
+  }
+  
+.add-btn.focus, .add-btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.box{
+    margin: 40px 0px 20px 0px;
+   
+}
+.input-group {
+	width: 100% !important;
+    padding: 6px 10px 4px 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font: normal normal normal 1em 'robotoregular';
+    color: #898989;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+.btn{
+    padding:0em !important;
+    background-color: transparent;
+    padding: 15px !important;
+    font-size: 1.0em;
+    margin-right: 10px;
+    color: rgba(64,64,64,1.00);
+    margin:130px 0 0 0;
+}
+button.btn.sIcon.lms-bg-01.lms-color-07 {
+	padding: 0 10px !important;
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #fcfcfc 1%, #eaeaea 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #fcfcfc 1%,#eaeaea 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #fcfcfc 1%,#eaeaea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	height: 31px;
+    border: 1px solid #ced4da;
+}
+.icon20{
+    width:15px;
+	height:15px;
+	
+}
+.form-control:focus {
+    border-color: none !important; 
+    box-shadow: none !important; 
+    height:15px;
+}
+.input-group > .form-control:not(:last-child), .input-group > .custom-select:not(:last-child) {
+    height: 31px;
+    margin: 130px 0 0 0;
+}

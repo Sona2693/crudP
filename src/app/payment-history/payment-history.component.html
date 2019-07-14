@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <p class="ph">Payment History</p>
+    </div>
+
+    <div class="col-6">
+      <div class="row justify-content-end">
+        <div class="col-4">
+          <div class="row justify-content-end">
+            <p class="sort">Sort</p>
+            <button mat-icon-button class="icon20" [matMenuTriggerFor]="sortMenu">
+              <mat-icon class="icon20">swap_vert</mat-icon>
+            </button>
+          </div>
+          <mat-menu #sortMenu="matMenu">
+            <button mat-menu-item (click)="sort('asc')">
+              <mat-icon>text_rotation_down</mat-icon>
+              <span>Ascending</span>
+            </button>
+            <button mat-menu-item (click)="sort('dsc')">
+              <mat-icon>text_rotate_up</mat-icon>
+              <span>Descending</span>
+            </button>
+          </mat-menu>
+        </div>
+        <div class="col-4">
+          <div class="row justify-content-end">
+            <p class="filter">Filter</p>
+            <button mat-icon-button class="icon20" [matMenuTriggerFor]="menu">
+              <mat-icon class="icon20">tune</mat-icon>
+            </button>
+          </div>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="recieve('All')">
+              <mat-icon>dialpad</mat-icon>
+              <span>All</span>
+            </button>
+            <button mat-menu-item (click)="recieve('Success')">
+              <mat-icon>payment</mat-icon>
+              <span>Success</span>
+            </button>
+            <button mat-menu-item (click)="recieve('Initiated')">
+              <mat-icon>picture_in_picture_alt</mat-icon>
+              <span>Initiated</span>
+            </button>
+            <button mat-menu-item (click)="recieve('Failed')">
+              <mat-icon>remove_shopping_cart</mat-icon>
+              <span>Failed</span>
+            </button>
+            <button mat-menu-item (click)="recieve('Dropped')">
+              <mat-icon>trending_down</mat-icon>
+              <span>Dropped</span>
+            </button>
+            <button mat-menu-item (click)="recieve('Refunded')">
+              <mat-icon>money</mat-icon>
+              <span>Refunded</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 payment" *ngFor="let model of filterPaymentLog| paginate:{ itemsPerPage: limit, currentPage: p }">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <img class="icon" src="assets/img/cash.png" />
+          </div>
+          <div class="col-6">
+            <div>{{model.email}}</div>
+            <div>{{model.orderDate}}</div>
+            <!-- <div>{{model.id}}</div>
+            <div>{{model.merchantId}}</div> -->
+          </div>
+          <div class="col-3">
+            <div>{{model.amt}}</div>
+            <div>{{model.status}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 footer" >
+      <div class="row justify-content-end ">
+        <div class="col-8">
+          <input matInput type="text" class="form-control" id="ipp" name="ipp" [(ngModel)]="ipp" placeholder="limit">
+        </div>
+        <div class="col-4">
+          <button mat-button class="first" (click)="firstPage()">FirstPage</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 footer">
+      <pagination-controls (pageChange)="pageChanged($event)" maxSize="10"></pagination-controls>
+    </div>
+  </div>
+
+
+</div>

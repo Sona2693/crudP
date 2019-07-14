@@ -1,0 +1,31 @@
+<div id="addModelPopup">
+    <div class="cm">
+      <!-- <div class="modal-content"> -->
+  
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title modalTitle">Delete Payment</h4>
+        <button (click)="closeDialog();" matButton type="button" class="close cc" data-dismiss="modal">×</button>
+      </div>
+  
+  
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+  
+            <div>
+                <input matInput type="text" class="form-control" id="id" 
+                name="id" [(ngModel)]="id" placeholder="Enter id">
+              </div>
+        </form>
+      </div>
+  
+  
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="reset" (click)="closeDialog();" class="btn reset" data-dismiss="modal">Cancel</button>
+        <button type="submit" (click)="delete();" class="btn submit">Submit</button>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
