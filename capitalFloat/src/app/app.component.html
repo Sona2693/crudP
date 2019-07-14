@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col=6">
+      <div class="col justify-content-center">
+            <div class="input-group">
+                <input type="text" #query class="form-control" (click)="$event.stopPropagation()" placeholder="All search" (enter)="filter(query.value)">
+                <div class="input-group-append">
+                  <button type="submit" (click)="filter(query.value)" class="btn sIcon lms-bg-01 lms-color-07" >
+                    <img src="./assets/img/magnifier.svg" alt="search" class="icon20">
+                  </button>
+                </div>
+              </div>
+<div class="add"><button mat-button class="add-bttn" (click)="addPayment()">Add Payment!</button></div>
+<div class="edit"><button mat-button class="edit-bttn" (click)="editPayment()">Edit Payment!</button></div>
+  <div class="delete"><button mat-button class="delete-bttn" (click)="deletePayment()">Delete Payment!</button></div>
+</div>
+    </div>
+    <div class="col-6 box">
+        <app-payment-history></app-payment-history>
+      
+      <div>
+     
+    </div>
+    </div>
+   
+  </div>
+
+ 
+</div>
